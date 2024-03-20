@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-
+import useDispatch from 
 function CartItem({ item }) {
   const [count, setCount] = useState(item.count);
-
+  const dispatch = useDispatch()
   useEffect(() => {
     setCount(item.count);
   }, [item.count]);
@@ -27,6 +27,7 @@ function CartItem({ item }) {
         </button>
         <button
           className="cart-item-button"
+          
         >
           Remove
         </button>
